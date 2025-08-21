@@ -5,24 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thamizh - Portfolio</title>
     <link href="style.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
-        <div class="logo">Portfolio</div>
+    <nav data-aos="fade-in" data-aos-duration="1500" data-aos-delay="200">
+        <div class="logo" data-aos="fade-in" data-aos-duration="1700" data-aos-delay="500">Portfolio</div>
         <ul>
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" class="active" data-aos="fade-down" data-aos-duration="1700" data-aos-delay="1000">Home</a></li>
+            <li><a href="#about" data-aos="fade-down" data-aos-duration="1700" data-aos-delay="1100">About</a></li>
+            <li><a href="#skills" data-aos="fade-down" data-aos-duration="1700" data-aos-delay="1200">Skills</a></li>
+            <li><a href="#projects" data-aos="fade-down" data-aos-duration="1700" data-aos-delay="1300">Projects</a></li>
+            <li><a href="#experience" data-aos="fade-down" data-aos-duration="1700" data-aos-delay="1400">Experience</a></li>
+            <li><a href="#contact" data-aos="fade-down" data-aos-duration="1700" data-aos-delay="1500">Contact</a></li>
         </ul>
-        <a href="#" class="download-cv">Download CV</a>
+        <a href="#" class="download-cv" data-aos="fade-in" data-aos-duration="1800" data-aos-delay="1700">Download CV</a>
     </nav>
 
     <!-- Home Section -->
-    <section id="home">
+    <section id="home" >
         <div class="geometric-bg">
             <div class="dot"></div>
             <div class="dot"></div>
@@ -32,14 +34,14 @@
             <div class="dot"></div>
         </div>
         
-        <div class="hero-container">
-            <div class="hero-left">
-                <h1 class="hero-name">Thamizh J L</h1>
+        <div class="hero-container" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="1000">
+            <div class="hero-left" >
+                <h1 class="hero-name" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="700">Thamizh J L</h1>
                 <h2 class="hero-role">Full Stack Developer</h2>
                 <p class="hero-description">
-                    I'm a passionate developer with expertise in creating modern, responsive web applications. I love turning ideas into reality through clean, efficient code and innovative solutions.
+                    I am a motivated and enthusiastic B.E. graduate with a solid foundation in web development and a strong passion for user interface design. As a fresher, I bring hands-on experience from academic projects and internships, where I built responsive websites and intuitive UI layouts focused on user experience and performance. I’m eager to join an innovative tech team where I can grow as a developer. 
                 </p>
-                <a href="#contact" class="hero-button">Get In Touch</a>
+                <a href="#contact" class="hero-button" >Get In Touch</a>
             </div>
             
             <div class="hero-right">
@@ -57,9 +59,9 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I’m a passionate and self-driven B.E. graduate with a strong foundation in web development and a keen eye for user interface design. Through academic projects and internships, I’ve gained hands-on experience building responsive websites and crafting clean, intuitive UI layouts that prioritize user experience and performance. I’m confident in converting designs into functional web pages and ensuring cross-device performance.</p>
+                    <p>I’m a passionate and self-driven B.E. graduate with a strong foundation in web development and a keen eye for user interface design. Through academic projects and internships.<br/><br/> I’ve gained hands-on experience building responsive websites and crafting clean, intuitive UI layouts that prioritize user experience and performance. I’m confident in converting designs into functional web pages and ensuring cross-device performance.</p>
                     <br>
-                    <p>I’m currently looking for opportunities to work with a dynamic tech team where I can apply my<br>skills, contribute creative solutions and grow as a front-end developer.</p>
+                    <p>I’m currently looking for opportunities to work with a dynamic tech team where I can apply my skills, contribute creative solutions and grow as a front-end developer.</p>
                 </div>
                 
                 <div class="about-highlights">
@@ -91,7 +93,7 @@
                 <div class="skill-card">
                     <div class="skill-icon">🌐</div>
                     <h3>Frontend Development</h3>
-                    <p> HTML5, CSS3, JavaScript, Bootstrap, React</p>
+                    <p> HTML5, CSS3, Tailwindcss, Bootstrap, JavaScript, React</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">⚙️</div>
@@ -122,9 +124,11 @@
                     <div class="project-image"><img src="images/project3.jpg"></div>
                     <div class="project-content">
                         <h3 class="project-title">Intelligent Shopping System </h3>
-                        <p class="project-description">• Built an IoT & AI-powered smart retail system with smart baskets, YOLOv11 and AWS S3 for automated billing.<br> 
-• Developed a Flutter app with Node.js and MongoDB backend, integrating real-time inventory, weight sensing, product recognition and a React-based POS dashboard.<br>
-• Reduced manual checkout time. </p>
+                        <p class="project-description">• Developed an IoT & AI-powered smart retail system with smart trolley using YOLOv11, AWS S3 and MongoDB for automated billing and real-time inventory updates.<br/>
+
+• Built a Flutter mobile app enables customers to track trolley products in real time and make secure in-app payments, significantly reducing manual effort, checkout time and queues.<br/>
+
+• React-based POS dashboard allows admins to seamlessly monitor transactions, trolleys and inventory in real time.</p>
                         <div class="project-tech">
                             <span class="tech-tag">React</span>
                             <span class="tech-tag">Node.js</span>
@@ -136,8 +140,48 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="project-card">
-                    <div class="project-image"><img src="images/project2.jpg"></div>
+                    <div class="project-image"><img src="images/wanderlust.png"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Wanderlust - A Travel Booking Website</h3>
+                        <p class="project-description">• Responsive travel booking website with dark & light themes, built using React.<br/>
+
+• Features include Sign up, Login, Profile Management, Dashboard, Destinations, Travel Packages, Bookings, Gallery, Travel Blog, Contact Us, About Us and Quick Search for seamless user experience.<br/>
+
+• Modern UI with smooth navigation, enabling users to easily explore destinations, view packages and manage bookings.</p>
+                        <div class="project-tech">
+                           <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Tailwindcss</span>
+                            <span class="tech-tag">Javascript</span>
+                            <span class="tech-tag">React.js</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="project-card">
+                    <div class="project-image"><img src="images/devtool.png"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Dev Tools Pro</h3>
+                        <p class="project-description">• Full-featured documentation platform with Docs, API, CLI, Changelog, Pricing Plans and setup guides (Installation, Quick Start, Configuration) for seamless adoption.<br/>
+
+• Includes Code Analysis, Plugins, Custom Rules, Integrations, CI/CD Pipelines and Team Management to showcase real-world workflows and automation.<br/>
+
+• A Modern and responsive dark-mode documentation site with smooth navigation, code snippets and commands, delivering an intuitive developer experience.</p>
+                        <div class="project-tech">
+                           <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Tailwindcss</span>
+                            <span class="tech-tag">Javascript</span>
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image"><img src="images/amazonclone.png"></div>
                     <div class="project-content">
                         <h3 class="project-title">E-Commerce Website (Amazon clone)</h3>
                         <p class="project-description">• Designed and developed a full-stack e-commerce website replicating Amazon features like shopping cart, 
@@ -165,6 +209,8 @@ sidebar.</p>
                         </div>
                     </div>
                 </div>
+
+                
             </div>
         </div>
     </section>
@@ -178,20 +224,28 @@ sidebar.</p>
                     <div class="experience-header">
                         <div>
                             <h3 class="experience-title">Full Stack Developer Intern</h3>
-                            <div class="experience-company">Fabhost Solution, Chennai </div>
+                            <div class="experience-company">Fabhost Web Solution, Chennai </div>
                         </div>
                         <div class="experience-date"> 2 months</div>
                     </div>
                     <p class="experience-description">
-                        • Built responsive pages using HTML5, CSS3, JavaScript, ReactJS and MySQL.<br> 
-• Improved UI consistency and optimized data flow from frontend to backend. 
+                      • Developed full-stack web applications with frontend, backend, and database integration.<br/>
+
+• Built responsive web apps using modern frameworks and tools.
+
+Worked with RESTful APIs, Git/GitHub and deployment workflows.<br/>
+
+• Collaborated on real-time projects, enhancing problem-solving and project management skills.
                     </p>
                     <div class="experience-skills">
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">HTML5 / css3</span>
                         <span class="skill-tag">Javascript</span>
+                        <span class="skill-tag">Tailwind</span>
                         <span class="skill-tag">React</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">Node.js</span>
                         <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Github</span>
                     </div>
                 </div>
                 
@@ -204,8 +258,11 @@ sidebar.</p>
                         <div class="experience-date">1 month</div>
                     </div>
                     <p class="experience-description">
-                        • Worked on Java mini projects applying OOP principles. <br>
-• Strengthened debugging and problem-solving skills.
+                        • Developed Java mini-projects applying OOP concepts and data structures.<br/>
+
+• Practiced debugging, problem-solving and writing clean, modular code.<br/>
+
+• Gained hands-on experience with file handling, exceptions and basic GUI components.
                     </p>
                     <div class="experience-skills">
                         <span class="skill-tag">Java</span>
@@ -225,11 +282,39 @@ sidebar.</p>
                         <div class="experience-date">3 months</div>
                     </div>
                     <p class="experience-description">
-                       • Gained practical exposure to MERN stack and backend integration. 
+                       • Gained practical exposure to MERN stack and backend integration.<br/> 
+                       • Built responsive pages using HTML5, CSS3, JavaScript, ReactJS and MySQL.<br/>
+• Improved UI consistency and optimized data flow from frontend to backend.
                     </p>
                     <div class="experience-skills">
                         <span class="skill-tag">HTML5</span>
                         <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Full Stack SQL Course</h3>
+                            <div class="experience-company">Besant Technologies, Chennai</div>
+                        </div>
+                        <div class="experience-date">2 months</div>
+                    </div>
+                    <p class="experience-description">
+                     • Successfully completed an intensive Full Stack SQL course covering database design, query optimization, joins, indexing, stored procedures, triggers and views.<br/>
+
+• Gained hands-on experience in CRUD operations, data modeling and SQL-based application integration.<br/>
+
+• Worked on practical exercises and projects that enhanced problem-solving and analytical skills.
+                    </p>
+                    <div class="experience-skills">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">Bootstrap</span>
                         <span class="skill-tag">JavaScript</span>
                         <span class="skill-tag">React</span>
                         <span class="skill-tag">Node.js</span>
@@ -252,7 +337,7 @@ sidebar.</p>
                         <div class="contact-icon">📧</div>
                         <div>
                             <h4>Email</h4>
-                            <p>thamizhjaisankar@example.com</p>
+                            <p>thamizhjaisankar@gmail.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -265,18 +350,34 @@ sidebar.</p>
                     <div class="contact-item">
                         <div class="contact-icon">📍</div>
                         <div>
-                            <h4>Location</h4>
-                            <p>Thanjavur, India</p>
+                            <h4>Current Location</h4>
+                            <p>Chennai, India</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">💼</div>
                         <div>
                             <h4>Github</h4>
-                            <p>Thamizhjaisankar-git</p>
+                             <a href="https://github.com/Thamizhjaisankar-git" target="_blank" class="linkedin-link">
+                                <i class="fas fa-link"></i> Collaborated with Github
+                            </a>
                         </div>
                     </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">🌐</div>
+                        <div>
+                             <h4>Linkedin</h4>
+                         <!--   <button onclick="window.location.href='https://www.linkedin.com/in/thamizhjaisankar'">🔗</button>
+                            <p></p> -->
+                            <a href="https://www.linkedin.com/in/thamizhjaisankar/" target="_blank" class="linkedin-link">
+                                <i class="fas fa-link"></i> Get Connected with Linkedin
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
+<!-- 
                 <form class="contact-form">
                     <div class="form-group">
                         <label for="name">Name</label>
@@ -295,9 +396,90 @@ sidebar.</p>
                         <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
                     <button type="submit" class="submit-btn">Send Message</button>
-                </form>
+                </form> -->
+
+
+                
+<form id="contact-form">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="from_name" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="reply_to" required>
+    </div>
+    <div class="form-group">
+        <label for="subject" id="subject">Subject</label>
+        <input type="text" name="subject" placeholder="subject" required>
+    </div>
+    <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="message" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="submit-btn">Send Message</button>
+</form>
+
             </div>
         </div>
     </section>
+
+
+    
+
+<!-- EmailJS library -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+   // Init EmailJS
+   (function(){
+      emailjs.init("JG_A7pXlXUqdF-jJJ");
+   })();
+
+   // On page load
+   window.addEventListener("load", function() {
+       // Attach form handler
+       const form = document.getElementById("contact-form");
+       if (form) {
+           form.addEventListener("submit", function(e) {
+               e.preventDefault();
+               emailjs.sendForm("service_2bg6qs3", "template_fkcapgh", this, "JG_A7pXlXUqdF-jJJ")
+                   .then(() => alert("Message sent successfully!"))
+                   .catch(() => alert("Failed to send message. Please try again."));
+                    // ✅ Reset form after success
+            document.getElementById("contact-form").reset();
+           });
+       }
+
+       // Send test email
+       testEmail();
+   });
+
+   // Test function
+   function testEmail() {
+       emailjs.send("service_2bg6qs3", "template_fkcapgh", {
+           name: "Test User",
+           email: "test@example.com",
+           subject: "Test Subject",
+           message: "This is a test message"
+       }, "JG_A7pXlXUqdF-jJJ")
+       .then(res => {
+           console.log("✅ Test email sent!", res);
+           alert("✅ Test email sent successfully! Check your inbox.");
+       })
+       .catch(err => {
+           console.error("❌ Failed...", err);
+           alert("❌ Test email failed. Check console for details.");
+       });
+   }
+</script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+   AOS.init();
+</script>
+
+
 </body>
 </html>
