@@ -377,108 +377,90 @@ Worked with RESTful APIs, Git/GitHub and deployment workflows.<br/>
                     </div>
 
                 </div>
-<!-- 
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form> -->
 
-
-                
-<form id="contact-form">
-    <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="from_name" required>
-    </div>
-    <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="reply_to" required>
-    </div>
-    <div class="form-group">
-        <label for="subject" id="subject">Subject</label>
-        <input type="text" name="subject" placeholder="subject" required>
-    </div>
-    <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="message" rows="5" required></textarea>
-    </div>
-    <button type="submit" class="submit-btn">Send Message</button>
-</form>
-
+                        
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="from_name" required>
             </div>
-        </div>
-    </section>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="reply_to" required>
+            </div>
+            <div class="form-group">
+                <label for="subject" id="subject">Subject</label>
+                <input type="text" name="subject" placeholder="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+
+                    </div>
+                </div>
+            </section>
 
 
-    
+            
 
-<!-- EmailJS library -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <!-- EmailJS library -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-<script>
-   // Init EmailJS
-   (function(){
-      emailjs.init("JG_A7pXlXUqdF-jJJ");
-   })();
+        <script>
+        // Init EmailJS
+        (function(){
+            emailjs.init("JG_A7pXlXUqdF-jJJ");
+        })();
 
-   // On page load
-   window.addEventListener("load", function() {
-       // Attach form handler
-       const form = document.getElementById("contact-form");
-       if (form) {
-           form.addEventListener("submit", function(e) {
-               e.preventDefault();
-               emailjs.sendForm("service_2bg6qs3", "template_fkcapgh", this, "JG_A7pXlXUqdF-jJJ")
-                   .then(() => alert("Message sent successfully!"))
-                   .catch(() => alert("Failed to send message. Please try again."));
-                    // ✅ Reset form after success
-            document.getElementById("contact-form").reset();
-           });
-       }
+        // On page load
+        window.addEventListener("load", function() {
+            // Attach form handler
+            const form = document.getElementById("contact-form");
+            if (form) {
+                form.addEventListener("submit", function(e) {
+                    e.preventDefault();
+                    emailjs.sendForm("service_2bg6qs3", "template_fkcapgh", this, "JG_A7pXlXUqdF-jJJ")
+                        .then(() =>{
+                                alert("Message sent successfully!");
+                                form.reset();
+                        }) 
+                        .catch(() => alert("Failed to send message. Please try again."));
+                            // ✅ Reset form after success
+                    
+                });
+            }
 
-       // Send test email
-       testEmail();
-   });
+            // Send test email
+            //    testEmail();
+        });
 
-   // Test function
-   function testEmail() {
-       emailjs.send("service_2bg6qs3", "template_fkcapgh", {
-           name: "Test User",
-           email: "test@example.com",
-           subject: "Test Subject",
-           message: "This is a test message"
-       }, "JG_A7pXlXUqdF-jJJ")
-       .then(res => {
-           console.log("✅ Test email sent!", res);
-           alert("✅ Test email sent successfully! Check your inbox.");
-       })
-       .catch(err => {
-           console.error("❌ Failed...", err);
-           alert("❌ Test email failed. Check console for details.");
-       });
-   }
-</script>
+        // Test function
+        //    function testEmail() {
+        //        emailjs.send("service_2bg6qs3", "template_fkcapgh", {
+        //            name: "Test User",
+        //            email: "test@example.com",
+        //            subject: "Test Subject",
+        //            message: "This is a test message"
+        //        }, "JG_A7pXlXUqdF-jJJ")
+        //        .then(res => {
+        //            console.log("✅ Test email sent!", res);
+        //            alert("✅ Test email sent successfully! Check your inbox.");
+        //        })
+        //        .catch(err => {
+        //            console.error("❌ Failed...", err);
+        //            alert("❌ Test email failed. Check console for details.");
+        //        });
+        //    }
+        </script>
 
-<!-- AOS -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-   AOS.init();
-</script>
+        <!-- AOS -->
+        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        <script>
+        AOS.init();
+        </script>
 
 
 </body>
